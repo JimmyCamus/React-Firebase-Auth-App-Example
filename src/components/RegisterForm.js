@@ -3,6 +3,7 @@ const RegisterForm = ({
   registerForm,
   handleCreateUser,
   userContext,
+  navigate,
 }) => {
   return (
     <div>
@@ -22,7 +23,9 @@ const RegisterForm = ({
           setRegisterForm({ ...registerForm, password: e.target.value })
         }
       />
-      <button onClick={() => handleCreateUser(registerForm, userContext)}>
+      <button
+        onClick={() => handleCreateUser(registerForm, userContext, navigate)}
+      >
         Register
       </button>
     </div>
